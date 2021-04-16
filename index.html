@@ -1,0 +1,118 @@
+ 
+<html>
+  <head>
+    <title>Hand Gesture To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <h3 class="btn btn-warning heading">
+        Hand Gesture to Emoji
+
+      </h3>
+      <br>
+      <h3 class="btn btn-success heading">
+        <span>&#128075;</span>
+        <span>&#128077;</span>
+        <span>&#128078;</span>
+        <span>&#128076;</span>
+        <span>&#129304;</span>
+        <span>&#x1f64f;</span>
+        <span>&#128170;</span>
+        <span>&#x1f91e;</span>
+        <span>&#128070;</span>
+        <span>&#128071;</span>
+        <span>&#128072;</span>
+        <span>&#128073;</span>
+        <span>&#9996;</span>
+
+      </h3>
+
+      <br>
+      
+      <h3 style="color: red; background-color: rgba(255, 255, 255, 0.521);">NOTE: While taking a photo, make sure that only your hand is visible. Your body and head shoul not come in the photo for best results!</h3>
+      
+      <br>
+      <p style="font-size: 22px;">Take Your Selfie to Generate Gesture
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam View:</label>
+        <div id="camera"></div>
+        <br><br>
+        <button onclick="takeSnapshot();" class="btn btn-warning">Capture Imge</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+
+        <label>Prediction 1:</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji"></p>
+
+        <label>Prediction 2:</label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emoji2">
+
+        </p>
+      </div>
+
+      
+       <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check();" class="btn btn-success">Predict Gesture</button>
+
+      </div>
+
+      <h2>Here are the Hand Gesture this Website can understand:-</h2>
+      <br>
+      <h2>
+        ⬛Blank(No Hand Gesture Only a Blank Screen)⬛
+        <hr>
+        👋Hello👋
+        <hr>
+        👍All the Best👍
+        <hr>
+        👎No👎
+        <hr>
+        👌Awesome👌
+        <hr>
+        🤘Yo🤘
+        <hr>
+        🙏Please🙏
+        <hr>
+        💪Strong💪
+        <hr>
+        🤞Fingers Crossed🤞
+        <hr>
+        👆👉👈👇Pointing👇👈👉👆
+        <hr>
+        ✌Victory/Peace✌
+        <hr>
+      </h2>
+<h3 style="color: red; background-color: rgba(255, 255, 255, 0.521);">NOTE: While taking a photo, make sure that only your hand is visible. Your body and head shoul not come in the photo for best results!</h3>
+    </center>
+
+  </div>
+
+  <br>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
